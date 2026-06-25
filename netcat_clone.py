@@ -1,5 +1,5 @@
 """
-DAY 5 – NETCAT CLONE (Educational)
+DAY 5 – NETCAT CLONE 
 - Listen mode (-l) waits for connections.
 - Client mode (-c IP:PORT) connects to a listener.
 - Send messages, transfer files, execute remote commands.
