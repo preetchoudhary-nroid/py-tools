@@ -1,0 +1,16 @@
+PORT SCAN REPORT ON TARGET: 192.168.56.103
+ Date: 2026--06--23--21--48--05
+--------------------------------------------------
+[-] Port 50    | STATUS: CLOSED
+[-] Port 51    | STATUS: CLOSED
+[-] Port 52    | STATUS: CLOSED
+[-] Port 53    | STATUS: CLOSED
+[-] Port 54    | STATUS: CLOSED
+[-] Port 55    | STATUS: CLOSED
+[-] Port 56    | STATUS: CLOSED
+[-] Port 57    | STATUS: CLOSED
+[-] Port 58    | STATUS: CLOSED
+[-] Port 59    | STATUS: CLOSED
+[-] Port 60    | STATUS: CLOSED
+[-] Port 61    | STATUS: CLOSED
+[-] Port 62    | STATUS: CLOSED
