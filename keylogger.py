@@ -67,7 +67,8 @@ class EducationalKeylogger:
         If the released key is ESC, we stop the listener.
         """
         if key == keyboard.Key.esc:  # <--- FIXED: Key.esc (not key.esc)
-            return False  # Stops the listener
+           return False  # Stops the listener
+
 
     def start_logging(self):
         """

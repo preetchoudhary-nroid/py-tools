@@ -63,8 +63,7 @@ total = total + shipping
 print(f"{total} is amount to pay with shipping charges of {shipping} rupees")
 #LISTS AND DICTIONARIES
 #LISTS[] - numbered shopping list starting at zero
-targets = [ "ip_address" , "firewall" , "database" ]
-targets.append("router")
+targets = ["ip_address", "firewall", "database", "router"]
 targets.remove("firewall")
 #pop() - pops out the specific target and deletes it.
 popped_items  = targets.pop(0)

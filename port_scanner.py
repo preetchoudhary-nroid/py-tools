@@ -1,7 +1,7 @@
 #SIMPLE MULTIPLE PORT SCANNER (NMAP)
 import socket
 from datetime import datetime
-print("-----CYBERSECURITY AUTOMATED PORT SCANNER")
+print("-----CYBERSECURITY AUTOMATED PORT SCANNER------")
 target_ip = input("Enter TARGET IP: ")
 start_port = int(input("Enter START PORT: "))
 end_port = int(input("Enter END PORT: "))
