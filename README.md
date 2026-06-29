@@ -1,52 +1,82 @@
-# py-tools
-
-A collection of foundational Python scripts built for network reconnaissance, system administration automation, and endpoint input auditing. This repository serves as a hands-on technical portfolio demonstrating socket programming, file-system interaction, and security analysis.
-
----
-
-## Legal and Ethical Disclaimer
-
-IMPORTANT: The tools contained within this repository are developed strictly for educational purposes, defensive analysis, and authorized penetration testing audits. 
-
-* DO NOT execute any network scanning or monitoring tools against systems without explicit, written prior authorization from the system owner.
-* The author accepts absolutely no liability and is not responsible for any misuse, damage, or illegal activity caused by these scripts. 
-
----
-
-## Included Tools and Modules
-
-### 1. Automated Port Scanner (port_scanner.py)
-A network scouting utility that probes a range of target ports to map active services.
-* Core Concepts: Sockets (connect_ex), input sanitization, error-handling overrides.
-* Features: Maps ports to known common services (21=FTP, 22=SSH, 80=HTTP, 443=HTTPS) and generates an automated summary log file upon completion.
-
-### 2. Maintenance File Organizer (file_organizer.py)
-An automated system administrative script that scans cluttered directories and groups loose files cleanly by their extensions.
-* Core Concepts: OS file-system manipulation (os), high-level file utilities (shutil).
-* Features: Dynamic path isolation, directory mapping, and a structural transaction memory engine that allows users to seamlessly Undo and reverse the entire sorting operation.
-
-### 3. Custom Netcat Utility (netcat_clone.py)
-A lightweight, raw-socket implementation modeling the classic Netcat utility for point-to-point network communication.
-* Core Concepts: TCP stream manipulation (SOCK_STREAM), data byte chunking (send/recv).
-* Features: Supports interactive terminal chat streams and point-to-point file transfers between a local client and a listening server.
-
-### 4. Input Event Auditor (keylogger.py)
-An educational script designed to analyze how operating systems capture peripheral hardware inputs via low-level hooks.
-* Core Concepts: Operating system event listeners, hardware hooks (pynput).
-* Features: Distinguishes between textual alphanumeric inputs and special command keystrokes with event logging. Used to study how endpoint tracking occurs and how to build system-level defenses against spyware.
-
----
-
-## Installation and Environment Setup
-
-To run these tools locally, ensure you have Python 3 installed, clone the repository, and install the required peripheral tracking library.
-
-```bash
-# 1. Clone the repository
-git clone [https://github.com/preetchoudhary-nroid/py-tools.git](https://github.com/preetchoudhary-nroid/py-tools.git)
-
-# 2. Navigate into the project folder
+Py-Tools: 
+This repository contains a professional cybersecurity toolset developed to advance from core Python fundamentals to functional reconnaissance, network auditing, and defensive analysis. Each tool is engineered to bridge the gap between theoretical security concepts and practical Python execution.
+Project Dashboard
+Category
+Tools
+Core Technologies
+1.---Vulnerability Assessment
+--Basic Vulnerability Scanner (v1)
+-Sockets, Banner Grabbing, Signatures
+2.---Network Analysis
+--Packet Sniffer, Netcat Clone
+-Scapy, Raw Sockets, Multithreading
+3.---Reconnaissance
+--Subdomain Scanner, Network Info Scanner
+-DNS Resolution, HTTP Headers, urllib
+4.---Auditing & Exploitation
+--SSH Brute Forcer, Hash Cracker
+-Paramiko, Hashlib, Wordlist Processing
+5.---Defensive Analysis
+--Log Analyzer, Input Event Auditor
+-Regular Expressions, pynput, File I/O
+6.---System Automation
+--Automated File Organizer
+-os, shutil, Transaction-Memory Logic
+7.---Cryptography
+--Caesar Cipher Engine
+-ord/chr, Modular Arithmetic
+##----Cloning and Installation----
+To audit these tools or run them in your own laboratory environment, follow these steps to clone the repository and install necessary dependencies.
+1. Clone the Repository
+Open your terminal and run:
+git clone https://github.com/preetchoudhary-nroid/py-tools.git
 cd py-tools
-
-# 3. Install required hardware monitoring modules
-pip install pynput
+2. Install Required Libraries
+These tools require third-party libraries to handle network packets, SSH protocols, and web requests
+.
+pip install scapy paramiko requests pynput
+Note for Linux/Kali users: If your environment is externally managed, use --break-system-packages
+.
+3. Network Driver Requirement (Windows)
+The Packet Sniffer requires the Npcap driver. During installation, you must check the box for "Install Npcap in WinPcap API-compatible Mode" to allow the Scapy library to interface with your network hardware
+.
+Technical Feature Highlights
+Basic Vulnerability Scanner (Version 1)
+This tool performs service enumeration by initiating a TCP Three-Way Handshake (SYN -> SYN-ACK -> ACK)
+. Once a live pipeline is opened, the engine utilizes Banner Grabbing via s.recv to extract service identity strings
+. It cleans raw data using .decode(errors='ignore') to prevent crashes from proprietary binary data
+. Finally, it normalizes the banner—stripping whitespace and forcing lowercase—to match it against a signature-based database of known vulnerable versions
+.
+Network Packet Sniffer
+A "digital wiretap" that intercepts live traffic at the data-link layer using Scapy
+. It parses IP Headers to extract source/destination addresses and identifies protocols like TCP, UDP, and ICMP
+. The sniffer includes a Payload Preview engine that converts raw bytes into readable ASCII text, replacing non-printable characters with dots to ensure terminal stability
+.
+Custom Netcat Utility
+A lightweight implementation of the classic Netcat tool for point-to-point communication
+. It supports two modes:
+Interactive Chat: Uses SOCK_STREAM for reliable TCP data transfer
+.
+Command Execution: Leverages the subprocess library to execute remote system commands and return the output (stdout/stderr) over the network
+.
+File Transfer: Implements a custom protocol that sends a Metadata Header (filename and size) before streaming raw bytes using binary chunking
+.
+SSH Service Auditor
+Designed to audit authentication security on Port 22, this tool uses the Paramiko library to manage encrypted network channels
+. It automates credential testing against a target host using high-speed wordlist attacks
+. The engine is optimized for stability with an AutoAddPolicy for host keys and a 3-second timeout guard to prevent dead sockets from stalling the audit
+.
+Log Analyzer & Security Data Extractor
+These tools utilize Regular Expressions (Regex) to perform "cookie-cutter" data isolation
+.
+Log Analysis: Scans Apache/Nginx logs to detect Directory Brute-Forcing (high frequency of 404 errors) and Rate Abuse (multiple requests per second)
+.
+Data Extraction: Uses patterns like \d{1,3}\.\d{1,3}... to automatically carve out IP addresses, emails, and URLs from messy, unstructured text files
+.
+Ethics and Disclaimer
+FOR EDUCATIONAL AND DEFENSIVE AUDITING PURPOSES ONLY. The tools in this repository were developed to understand the mechanics of system vulnerabilities and endpoint defenses
+. Unauthorized access to computer systems is illegal. All testing and development were performed strictly on self-owned virtual machines and local network environments
+. Use these tools responsibly and only on systems where you have explicit permission to audit.
+The owner of this repository accepts no responsibility and is not liable for any illegal activities, data loss, or system damages caused by the misuse of this code.
+---
+---
