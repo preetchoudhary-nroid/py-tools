@@ -39,11 +39,13 @@ This tool performs service enumeration by initiating a TCP Three-Way Handshake (
 . It cleans raw data using .decode(errors='ignore') to prevent crashes from proprietary binary data
 . Finally, it normalizes the banner—stripping whitespace and forcing lowercase—to match it against a signature-based database of known vulnerable versions
 .
+
 Network Packet Sniffer
 A "digital wiretap" that intercepts live traffic at the data-link layer using Scapy
 . It parses IP Headers to extract source/destination addresses and identifies protocols like TCP, UDP, and ICMP
 . The sniffer includes a Payload Preview engine that converts raw bytes into readable ASCII text, replacing non-printable characters with dots to ensure terminal stability
 .
+
 Custom Netcat Utility
 A lightweight implementation of the classic Netcat tool for point-to-point communication
 . It supports two modes:
@@ -53,11 +55,13 @@ Command Execution: Leverages the subprocess library to execute remote system com
 .
 File Transfer: Implements a custom protocol that sends a Metadata Header (filename and size) before streaming raw bytes using binary chunking
 .
+
 SSH Service Auditor
 Designed to audit authentication security on Port 22, this tool uses the Paramiko library to manage encrypted network channels
 . It automates credential testing against a target host using high-speed wordlist attacks
 . The engine is optimized for stability with an AutoAddPolicy for host keys and a 3-second timeout guard to prevent dead sockets from stalling the audit
 .
+
 Log Analyzer & Security Data Extractor
 These tools utilize Regular Expressions (Regex) to perform "cookie-cutter" data isolation
 .
