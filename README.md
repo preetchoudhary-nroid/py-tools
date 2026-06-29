@@ -32,7 +32,7 @@ Note for Linux/Kali users: If your environment is externally managed, use --brea
 3. Network Driver Requirement (Windows)
 The Packet Sniffer requires the Npcap driver. During installation, you must check the box for "Install Npcap in WinPcap API-compatible Mode" to allow the Scapy library to interface with your network hardware
 .
-Technical Feature Highlights
+
 Basic Vulnerability Scanner (Version 1)
 This tool performs service enumeration by initiating a TCP Three-Way Handshake (SYN -> SYN-ACK -> ACK)
 . Once a live pipeline is opened, the engine utilizes Banner Grabbing via s.recv to extract service identity strings
@@ -65,10 +65,12 @@ Log Analysis: Scans Apache/Nginx logs to detect Directory Brute-Forcing (high fr
 .
 Data Extraction: Uses patterns like \d{1,3}\.\d{1,3}... to automatically carve out IP addresses, emails, and URLs from messy, unstructured text files
 .
+
+
+
 Ethics and Disclaimer
 FOR EDUCATIONAL AND DEFENSIVE AUDITING PURPOSES ONLY. The tools in this repository were developed to understand the mechanics of system vulnerabilities and endpoint defenses
 . Unauthorized access to computer systems is illegal. All testing and development were performed strictly on self-owned virtual machines and local network environments
 . Use these tools responsibly and only on systems where you have explicit permission to audit.
 The owner of this repository accepts no responsibility and is not liable for any illegal activities, data loss, or system damages caused by the misuse of this code.
----
 ---
