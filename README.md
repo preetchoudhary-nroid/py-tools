@@ -1,29 +1,21 @@
 Py-Tools: 
-This repository contains a professional cybersecurity toolset developed to advance from core Python fundamentals to functional reconnaissance, network auditing, and defensive analysis. Each tool is engineered to bridge the gap between theoretical security concepts and practical Python execution.
+---------
 Project Dashboard
-Category
 Tools
 Core Technologies
-1.---Vulnerability Assessment
---Basic Vulnerability Scanner (v1)
+1.Basic Vulnerability Scanner (v1)
 -Sockets, Banner Grabbing, Signatures
-2.---Network Analysis
---Packet Sniffer, Netcat Clone
+2.Packet Sniffer, Netcat Clone
 -Scapy, Raw Sockets, Multithreading
-3.---Reconnaissance
---Subdomain Scanner, Network Info Scanner
+3.Subdomain Scanner, Network Info Scanner
 -DNS Resolution, HTTP Headers, urllib
-4.---Auditing & Exploitation
---SSH Brute Forcer, Hash Cracker
+4.SSH Brute Forcer, Hash Cracker
 -Paramiko, Hashlib, Wordlist Processing
-5.---Defensive Analysis
---Log Analyzer, Input Event Auditor
+5.Log Analyzer, Input Event Auditor
 -Regular Expressions, pynput, File I/O
-6.---System Automation
---Automated File Organizer
+6.Automated File Organizer
 -os, shutil, Transaction-Memory Logic
-7.---Cryptography
---Caesar Cipher Engine
+7.Caesar Cipher Engine
 -ord/chr, Modular Arithmetic
 ##----Cloning and Installation----
 To audit these tools or run them in your own laboratory environment, follow these steps to clone the repository and install necessary dependencies.
