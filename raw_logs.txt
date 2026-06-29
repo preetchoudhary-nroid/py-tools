@@ -1,4 +1,0 @@
-Host unexpected connection from IP 192.168.1.55 at 14:00.
-Contact the administrator at threat_team@company.com or support@security.org for help.
-Malicious payload downloaded from http://malicious-domain.com/badfile.exe yesterday.
-Backup server is operating on 10.0.0.1 and reporting status to https://safe-vault.net/dashboard.
