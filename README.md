@@ -17,8 +17,8 @@ Core Technologies
 -os, shutil, Transaction-Memory Logic
 7.Caesar Cipher Engine
 -ord/chr, Modular Arithmetic
-##----Cloning and Installation----
-To audit these tools or run them in your own laboratory environment, follow these steps to clone the repository and install necessary dependencies.
+
+
 1. Clone the Repository
 Open your terminal and run:
 git clone https://github.com/preetchoudhary-nroid/py-tools.git
